@@ -18,38 +18,40 @@ class MemoryDetails extends StatelessWidget {
           title
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height*0.667,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: FileImage(image),
-                fit: BoxFit.fill
-
-              )
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height*0.667,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: FileImage(image),
+                  fit: BoxFit.fill
+      
+                )
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Text(title,
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(title,
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+      
+                ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(3),
+              child: Text(desc,
               style: TextStyle(
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+      
               ),),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(3),
-            child: Text(desc,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w400,
-
-            ),),
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

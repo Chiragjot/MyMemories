@@ -42,13 +42,12 @@ class _AddMemoriesState extends State<AddMemories> {
         backgroundColor: Colors.black,
         title: const Text('Add memories'),
       ),
-      body: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-
-          SingleChildScrollView(
-            child: Padding(
+      body: SingleChildScrollView(
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
@@ -67,36 +66,36 @@ class _AddMemoriesState extends State<AddMemories> {
                       controller: _descController,
                       decoration: InputDecoration(
                         labelText: 'Description',
-
+      
                       ),
                     ),
                   ),
-
+      
                   ImageInput(onSelectImage: _selectImage,)
-
-
-
+      
+      
+      
                 ],
               ),
             ),
-          ),
-
-
-
-
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: RaisedButton.icon(
-              color: Colors.amber,
-                onPressed:_saveMemory,
-                icon: Icon(Icons.add),
-              label: Text('Add place'),
-              elevation: 0,
-              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            ),
-          )
-
-        ],
+      
+      
+      
+      
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: RaisedButton.icon(
+                color: Colors.amber,
+                  onPressed:_saveMemory,
+                  icon: Icon(Icons.add),
+                label: Text('Add place'),
+                elevation: 0,
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+            )
+      
+          ],
+        ),
       ),
     );
   }

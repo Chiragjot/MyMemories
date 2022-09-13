@@ -15,6 +15,7 @@ class _MusicPageState extends State<MusicPage> {
 
     return Scaffold(
       body: Container(
+        //padding: EdgeInsets.all(10),
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/forest.jpg'), fit: BoxFit.cover)),
@@ -24,9 +25,7 @@ class _MusicPageState extends State<MusicPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(
-                height: 30,
-              ),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
@@ -53,9 +52,7 @@ class _MusicPageState extends State<MusicPage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 50,
-              ),
+              const Spacer(),
               Container(
                 height: 200,
                 width: 200,
@@ -65,9 +62,7 @@ class _MusicPageState extends State<MusicPage> {
                         image: AssetImage('assets/forest.jpg'),
                         fit: BoxFit.cover)),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const Spacer(),
               const Text(
                 'Happier',
                 style: TextStyle(
@@ -75,16 +70,12 @@ class _MusicPageState extends State<MusicPage> {
                     color: Colors.white,
                     fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const Spacer(),
               const Text(
                 'Marshmellow',
                 style: TextStyle(fontSize: 15, color: Colors.white),
               ),
-              const SizedBox(
-                height: 25,
-              ),
+              const Spacer(),
               ElevatedButton.icon(
                 onPressed: () {
                   audioCache.play('my_music.mp3');
@@ -106,7 +97,8 @@ class _MusicPageState extends State<MusicPage> {
                 },
                 icon: const Icon(Icons.stop),
                 label: const Text('Stop'),
-              )
+              ),
+              const Spacer(),
             ],
           ),
         ),
